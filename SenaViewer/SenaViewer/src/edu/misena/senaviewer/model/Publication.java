@@ -1,12 +1,13 @@
 package edu.misena.senaviewer.model;
-
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Publication {
     protected String title;
     protected Date edititionDate;
     protected String editorial;
-    protected String[] authors;
+    protected List<String> authors= new ArrayList<>();
 
     public Publication(String title,Date edititionDate,String editorial){
         this.title = title;
@@ -36,10 +37,10 @@ public class Publication {
         this.editorial = editorial;
     }
 
-    public String[] getAuthors() {
+    public List<String> getAuthors() {
         return authors;
     }
-    public void setAuthors(String[] authors) {
+    public void setAuthors(List<String> authors) {
         this.authors = authors;
     }
 
@@ -50,6 +51,5 @@ public class Publication {
                 "\nEditionDate: " + edititionDate +
                 "\nEditorial: " + editorial+
                 "\nAuthors: " + authors;
-
     }
 }
